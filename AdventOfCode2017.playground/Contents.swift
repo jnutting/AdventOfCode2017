@@ -13,3 +13,7 @@ print("Answer to Day 2, Part 1: \(d2p1Answer)")
 
 let d2p2Answer = sumOfEvenlyDivisibles(d2p1Input)
 print("Answer to Day 2, Part 2: \(d2p2Answer)")
+
+let d3p1Answer = distanceToMidpointFrom(265149)
+print("Answer to Day 3, Part 1: \(d3p1Answer)")
+
