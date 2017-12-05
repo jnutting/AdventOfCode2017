@@ -19,3 +19,7 @@ print("Answer to Day 3, Part 1: \(d3p1Answer)")
 
 let d3p2Answer = findFirstNumberInSpiralLargerThan(265149)
 print("Answer to Day 3, Part 2: \(d3p2Answer)")
+
+let d4p1Input = stringFromResource("Day4Part1")
+let d4p1Answer = validPassPhraseCount(for: d4p1Input)
+print("Answer to Day 4, Part 1: \(d4p1Answer)")
