@@ -17,3 +17,5 @@ print("Answer to Day 2, Part 2: \(d2p2Answer)")
 let d3p1Answer = distanceToMidpointFrom(265149)
 print("Answer to Day 3, Part 1: \(d3p1Answer)")
 
+let d3p2Answer = findFirstNumberInSpiralLargerThan(265149)
+print("Answer to Day 3, Part 2: \(d3p2Answer)")
