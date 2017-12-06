@@ -28,20 +28,27 @@ private func redistribute(_ blockSizes: [Int]) -> [Int] {
     return newBlockSizes
 }
 
-public func countBlockRedistributionsUntilLoopOccurs(_ allBlocks: String) -> Int {
+public func countBlockRedistributionsUntilLoopOccursAndReportLoopSize(_ allBlocks: String) -> (Int, Int) {
     var blockSizes = (allBlocks as NSString).components(separatedBy: .whitespaces).map { Int($0) ?? 0 }
 
     var redistributionCount = 0
     var blockSizeHistory = [[Int]]()
     blockSizeHistory.append(blockSizes)
+    var historyIndex: Int!
 
     while true {
         blockSizes = redistribute(blockSizes)
         redistributionCount += 1
-        if blockSizeHistory.contains(where: { $0 == blockSizes}) {
+
+        historyIndex = blockSizeHistory.index(where: { $0 == blockSizes})
+        if historyIndex != nil {
             break
         }
+//        if blockSizeHistory.contains(where: { $0 == blockSizes}) {
+//            break
+//        }
         blockSizeHistory.append(blockSizes)
     }
-    return redistributionCount
+    let loopSize = blockSizeHistory.count - historyIndex
+    return (redistributionCount, loopSize)
 }

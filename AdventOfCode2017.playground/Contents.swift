@@ -37,3 +37,7 @@ print("Answer to Day 5, Part 2: \(d5p2Answer)")
 let d6p1Input = stringFromResource("Day6Part1")
 let d6p1Answer = countBlockRedistributionsUntilLoopOccurs(d6p1Input)
 print("Answer to Day 6, Part 1: \(d6p1Answer)")
+
+let d6p2Input = stringFromResource("Day6Part1")
+let (_, d6p2Answer) = countBlockRedistributionsUntilLoopOccursAndReportLoopSize(d6p2Input)
+print("Answer to Day 6, Part 2: \(d6p2Answer)")
