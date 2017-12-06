@@ -26,3 +26,7 @@ print("Answer to Day 4, Part 1: \(d4p1Answer)")
 
 let d4p2Answer = validPassPhraseCountWithoutAnagrams(for: d4p1Input)
 print("Answer to Day 4, Part 2: \(d4p2Answer)")
+
+let d5p1Input = stringFromResource("Day5Part1")
+let d5p1Answer = numberOfJumpsToExit(d5p1Input)
+print("Answer to Day 5, Part 1: \(d5p1Answer)")
